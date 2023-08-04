@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url(../assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("ttf-variations");
+    font-weight: 500 800;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -245,7 +250,6 @@ ul {
     font-size: inherit;
     font-weight: inherit;
     color: hsl(0, 0%, 100%);
-    font-family: inherit;
 }
 
 .summary-button:hover {
