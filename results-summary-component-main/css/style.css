@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(224, 30%, 27%);
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.result-card {
+    max-width: 734px;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    -webkit-box-shadow: 10px 15px 25px hsl(221, 100%, 96%);
+            box-shadow: 10px 15px 25px hsl(221, 100%, 96%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.result-card_title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.results>.result-card_title {
+    margin-bottom: 35px;
+}
+
+.results>.result-card_title,
+.results-text {
+    color: hsl(241, 100%, 89%);
+}
+
+.results {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+    border-radius: 30px;
+    background: -o-linear-gradient(top, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    background: -webkit-gradient(linear, left top, left bottom, from(hsl(252, 100%, 67%)), to(hsl(241, 81%, 54%)));
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center;
+    padding: 45px 55px;
+}
+
+.results-scores {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 35px;
+    border-radius: 50%;
+    background: -o-linear-gradient(top, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    background: -webkit-gradient(linear, left top, left bottom, from(hsla(256, 72%, 46%, 1)), to(hsla(241, 72%, 46%, 0)));
+    background: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.results-scores span:first-child {
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 110%;
+}
+
+.results-scores span:last-child {
+    color: hsla(241, 100%, 89%, 0.5);
+    font-size: 18px;
+    line-height: 110%;
+}
+
+.results-description {
+    max-width: 288px;
+}
+
+.results-grade {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 740px) {
+
+    body {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 0;
+    }
+
+    .result-card {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+    }
+
+    .attribution {
+        margin-bottom: 30px;
+    }
+
+    .results {
+        width: 100%;
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+    }
+}
+
+.summary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+    background-color: inherit;
+    padding: 45px 40px;
+    font-weight: 700;
+}
+
+.summary-item {
+    padding: 18px 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    line-height: 0%;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+}
+
+.summary-item.reaction {
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.summary-item.memory {
+    color: hsl(39, 100%, 56%);
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.summary-item.verbal {
+    color: hsl(166, 100%, 37%);
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.summary-item.visual {
+    color: hsl(234, 85%, 45%);
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.summary-item>div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.summary-item>div>span {
+    margin-right: 10px;
+}
+
+.summary-item>div:last-child {
+    color: hsl(224, 30%, 27%);
+}
+
+.summary-item>div:last-child>span:last-child {
+    opacity: 0.5;
+}
+
+.summary-button {
+    background-color: hsl(224, 30%, 27%);
+    border: none;
+    border-radius: 30px;
+    padding: 16px 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: hsl(0, 0%, 100%);
+    font-family: inherit;
+}
+
+.summary-button:hover {
+    cursor: pointer;
+    background: -o-linear-gradient(top, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    background: -webkit-gradient(linear, left top, left bottom, from(hsl(252, 100%, 67%)), to(hsl(241, 81%, 54%)));
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 740px) {
+    .summary {
+        width: 100%;
+    }
+
+    .summary .result-card_title,
+    .summary-item:last-child {
+        margin-bottom: 35px;
+    }
+}
