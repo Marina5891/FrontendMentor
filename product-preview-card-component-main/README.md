@@ -75,5 +75,5 @@ body {
 
 ## Author
 
-- Github - [Marina5891](https://github.com/Marina5891)
+- Telegram - [@MarinaBrov](https://t.me/MarinaBrov)
 - Frontend Mentor - [@Marina5891](https://www.frontendmentor.io/profile/Marina5891)
