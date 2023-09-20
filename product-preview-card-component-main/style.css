@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/* Переменные */
+/* Миксины */
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+}
+
+/* Карточка + текст */
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+@media (max-width: 650px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.card__left, .card__right {
+  width: 50%;
+  max-width: 300px;
+  height: 450px;
+}
+@media (max-width: 650px) {
+  .card__left, .card__right {
+    width: 100%;
+    min-width: 340px;
+  }
+}
+@media (max-width: 650px) {
+  .card__left {
+    max-height: 240px;
+  }
+}
+.card__left img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+@media (max-width: 650px) {
+  .card__left img {
+    top: -50%;
+  }
+}
+.card__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: _;
+      -ms-flex-align: _;
+          align-items: _;
+  background-color: hsl(0, 0%, 100%);
+  padding: 32px;
+}
+@media (max-width: 650px) {
+  .card__right {
+    padding: 28px 24px;
+  }
+}
+.card__topic {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+.card__title {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(212, 21%, 14%);
+  letter-spacing: 0.5px;
+  line-height: 103%;
+}
+.card__description {
+  line-height: 170%;
+}
+
+/* Цена */
+.card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card__price-discont {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+  letter-spacing: 0.5px;
+  margin-right: 20px;
+}
+.card__price-full {
+  text-decoration: line-through;
+}
+
+/* Кнопка */
+.card__button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: _;
+          flex-direction: _;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(158, 36%, 37%);
+}
+.card__button:hover {
+  background-color: hsl(158, 36%, 20%);
+  cursor: pointer;
+}
+.card__button img {
+  margin-right: 10px;
+}

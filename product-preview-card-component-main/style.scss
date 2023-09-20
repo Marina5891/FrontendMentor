@@ -1,0 +1,156 @@
+/* Переменные */
+
+$bg-color: hsl(30, 38%, 92%);
+$light-color: hsl(0, 0%, 100%);
+
+$main-font-color: hsl(228, 12%, 48%);
+$second-font-color: hsl(212, 21%, 14%);
+
+$btn-bg-color: hsl(158, 36%, 37%);
+$btn-hover-bg-color: hsl(158, 36%, 20%);
+
+/* Миксины */
+
+@mixin fontStandart($color: $main-font-color, $weight: 500) {
+  font: {
+    family: "Montserrat", sans-serif;
+    size: 14px;
+    weight: $weight;
+  }
+  color: $color;
+}
+
+@mixin fontBold($color: $second-font-color) {
+  font: {
+    family: "Fraunces", serif;
+    size: 32px;
+    weight: 700;
+  }
+  color: $color;
+  letter-spacing: 0.5px;
+}
+
+@mixin flexBox($direction: row, $jc: flex-start, $ai: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+/* Общие стили */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include fontStandart;
+  @include flexBox(column, center, center);
+  padding: 20px;
+  background-color: $bg-color;
+  min-height: 100vh;
+}
+
+/* Карточка + текст */
+
+.card {
+  @include flexBox;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+    max-width: 300px;
+    height: 450px;
+    @media (max-width: 650px) {
+      width: 100%;
+      min-width: 340px;
+    }
+  }
+
+  &__left {
+    @media (max-width: 650px) {
+      max-height: 240px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      @media (max-width: 650px) {
+        top: -50%;
+      }
+    }
+  }
+
+  &__right {
+    @include flexBox(column, space-between, _);
+    background-color: $light-color;
+    padding: 32px;
+    @media (max-width: 650px) {
+      padding: 28px 24px;
+    }
+  }
+
+  &__topic {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+  }
+
+  &__title {
+    @include fontBold;
+    line-height: 103%;
+  }
+
+  &__description {
+    line-height: 170%;
+  }
+}
+
+/* Цена */
+
+.card__price {
+  @include flexBox(_, flex-start, center);
+
+  &-discont {
+    @include fontBold(hsl(158, 36%, 37%));
+    margin-right: 20px;
+  }
+
+  &-full {
+    text-decoration: line-through;
+  }
+}
+
+/* Кнопка */
+
+.card__button {
+  @include fontStandart($light-color, 700);
+  @include flexBox(_, center, center);
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: $btn-bg-color;
+
+  &:hover {
+    background-color: $btn-hover-bg-color;
+    cursor: pointer;
+  }
+
+  img {
+    margin-right: 10px;
+  }
+}
